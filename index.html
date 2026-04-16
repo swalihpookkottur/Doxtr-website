@@ -1,39 +1,260 @@
+<!DOCTYPE html>
+<html lang="ml">
 <head>
-  <link rel="icon" type="image/png" href="favicon.png">  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Doxtr. | Precisely Written. Perfectly Translated.</title>
+    <meta name="description" content="Premium Translation, Drafting, and Documentation Services. Expert Arabic-English translation and professional document works at Doxtr.">
+    <meta name="keywords" content="Translation services, Arabic to English translation, Document drafting, Doxtr, Professional typing, Kerala translation services, Malayalam translation">
+    <meta name="author" content="Doxtr">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
         :root {
-            --bg-color: #1a1a1a;
-            --text-color: #ffffff;
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
             --primary-green: #4CAF50;
-            --card-bg: #262626;
+            --text-main: #ffffff;
+            --text-dim: #b3b3b3;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
-            color: var(--text-color);
+            color: var(--text-main);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
+        /* Header & Logo */
         header {
-            padding: 2rem;
+            padding: 3rem 1rem;
             text-align: center;
-            border-bottom: 1px solid #333;
+            background: linear-gradient(to bottom, #1a1a1a, var(--bg-color));
         }
 
-        .logo {
+        header img {
+            height: 90px;
+            width: auto;
+            margin-bottom: 15px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            transition: transform 0.3s ease;
+        }
+
+        header img:hover {
+            transform: scale(1.05);
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--text-dim);
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 4rem 1.5rem;
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .hero h1 {
             font-size: 2.5rem;
-            font-weight: bold;
-            letter-spacing: -1px;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #fff, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .dot { color: var(--primary-green); }
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-dim);
+            margin-bottom: 2rem;
+        }
 
+        /* Services Grid */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            padding: 2.5rem 1.5rem;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary-green);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(76, 175, 80, 0.1);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .service-card p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+        }
+
+        /* Action Buttons */
+        .cta-container {
+            margin-top: 3rem;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-whatsapp {
+            background-color: var(--primary-green);
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #3d8b40;
+            box-shadow: 0 0 20px rgba(76, 175, 80, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem 2rem;
+            background-color: #0a0a0a;
+            text-align: center;
+            margin-top: 4rem;
+            border-top: 1px solid #222;
+        }
+
+        .social-links {
+            margin-bottom: 2rem;
+        }
+
+        .social-links a {
+            color: var(--text-main);
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-green);
+        }
+
+        .contact-info {
+            color: var(--text-dim);
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .copyright {
+            color: #555;
+            font-size: 0.8rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            header img { height: 70px; }
+            .services { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Doxtr. Logo">
+        <div class="tagline">Precisely Written. Perfectly Translated.</div>
+    </header>
+
+    <section class="hero">
+        <h1>Global Language Solutions</h1>
+        <p>Premium Translation & Documentation Services for Professionals and Businesses worldwide.</p>
+        
+        <div class="cta-container">
+            <a href="https://wa.me/917559847669" class="btn btn-whatsapp">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="service-card">
+            <i class="fas fa-language"></i>
+            <h3>Translation</h3>
+            <p>Expert Arabic to English and English to Arabic translations with high accuracy and cultural relevance.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-file-signature"></i>
+            <h3>Professional Drafting</h3>
+            <p>Academic projects, CVs, business proposals, and legal document drafting tailored to your needs.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-keyboard"></i>
+            <h3>Data Entry</h3>
+            <p>Fast, reliable, and secure data processing and typing services for all types of documents.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://instagram.com/doxtr.in" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:Kpswalihpktr@gmail.com"><i class="far fa-envelope"></i></a>
+            <a href="https://wa.me/917559847669"><i class="fab fa-whatsapp"></i></a>
+        </div>
+
+        <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> Kpswalihpktr@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +91 75598 47669</p>
+        </div>
+
+        <div class="copyright">
+            &copy; 2026 Doxtr. Agency. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
         .tagline {
             font-size: 1rem;
             color: #888;
